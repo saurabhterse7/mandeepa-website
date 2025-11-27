@@ -32,69 +32,75 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
     <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Our Projects - Company Portfolio</title>
-<style>
-body {
-margin: 0;
-font-family: Arial, sans-serif;
-background-color: #f5f5f5;
-color: #333;
-}
-.header {
-background-color: #0d6efd;
-padding: 20px;
-text-align: center;
-color: white;
-}
-.container {
-width: 90%;
-max-width: 1200px;
-margin: 40px auto;
-}
-.category-title {
-font-size: 26px;
-margin: 20px 0;
-color: #0d6efd;
-border-left: 5px solid #0d6efd;
-padding-left: 10px;
-}
-.project-card {
-background: white;
-border-radius: 10px;
-padding: 20px;
-margin-bottom: 20px;
-box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-cursor: pointer;
-}
-.project-title {
-font-size: 20px;
-font-weight: bold;
-color: #0d6efd;
-}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Projects - Company Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .header {
+            background-color: #0d6efd;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+
+        .category-title {
+            font-size: 26px;
+            margin: 20px 0;
+            color: #0d6efd;
+            border-left: 5px solid #0d6efd;
+            padding-left: 10px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+
+        .project-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #0d6efd;
+        }
 
 
-/* Popup */
-.popup {
-display: none;
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background: rgba(0,0,0,0.6);
-justify-content: center;
-align-items: center;
-}
-.popup-content {
-background: white;
-width: 90%;
-max-width: 600px;
-padding: 20px;
-border-radius: 10px;
-box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-}
-</style>
+        /* Popup */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup-content {
+            background: white;
+            width: 90%;
+            max-width: 600px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+    </style>
 </head>
 
 <body>
@@ -131,9 +137,8 @@ box-shadow: 0 4px 20px rgba(0,0,0,0.3);
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-0 pe-5">
-        <a href="index.html" class="navbar-brand ps-2 me-0">
-            <img class="LOGO" src="img/mandeepa__logo4.png" alt="Image">
-            <h2 class="m-0" style="color: aliceblue;"> MANDEEPA ENTERPRISES</h2>
+        <a href="index.html" class="navbar-brand ps-0 me-0">
+            <img class="LOGO" src="img/lg.png" alt="Image">
         </a>
         <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -184,7 +189,7 @@ box-shadow: 0 4px 20px rgba(0,0,0,0.3);
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="bg-light text-center h-100 p-5">
                         <div class="btn-square bg-white rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
-                            <i class="fa fa-phone-alt fa-2x text-primary"></i>
+                            <i class="fa fa-phone-alt fa-2x text-primary" style="color: #437f76 !important;"></i>
                         </div>
                         <h4 class="mb-3">Phone Number</h4>
                         <p class="mb-2">+91 9593480357</p>
@@ -196,7 +201,7 @@ box-shadow: 0 4px 20px rgba(0,0,0,0.3);
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="bg-light text-center h-100 p-5">
                         <div class="btn-square bg-white rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
-                            <i class="fa fa-envelope-open fa-2x text-primary"></i>
+                            <i class="fa fa-envelope-open fa-2x text-primary" style="color: #437f76 !important;"></i>
                         </div>
                         <h4 class="mb-3">Email Address</h4>
                         <p class="mb-2">Office@mandeepa.com</p>
@@ -208,7 +213,7 @@ box-shadow: 0 4px 20px rgba(0,0,0,0.3);
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="bg-light text-center h-100 p-5">
                         <div class="btn-square bg-white rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
-                            <i class="fa fa-map-marker-alt fa-2x text-primary"></i>
+                            <i class="fa fa-map-marker-alt fa-2x text-primary" style="color: #437f76 !important;"></i>
                         </div>
                         <h4 class="mb-3">Office Address</h4>
                         <p class="mb-2">+91 9593480357</p>
@@ -301,7 +306,10 @@ box-shadow: 0 4px 20px rgba(0,0,0,0.3);
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-4 col-md-6">
-                    <h5 class="text-white mb-4">Our Office</h5>
+                    <h5 class="text-white mb-4">Our Offices</h5>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>G1, TULIP Garden, Dasodrone, Rajarhat 
+                        Main Road, 
+                        opp SBI Bank, Kolkata 700136, India.</p>
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>504,Dev Plaza,
                         S.V. Road, Andheri West,
                         Mumbai – 400058, Maharashtra, India.</p>
