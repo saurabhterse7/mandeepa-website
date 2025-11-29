@@ -31,6 +31,40 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        .brochure-download {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #007bff, #00c6ff);
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.download-btn i {
+    font-size: 18px;
+}
+
+/* Hover effect */
+.download-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(0, 123, 255, 0.5);
+    background: linear-gradient(135deg, #00c6ff, #007bff);
+}
+
+    </style>
 </head>
 
 <body>
@@ -357,6 +391,11 @@
         </div>
     </div>
     <!-- Video Modal End -->
+    <div class="brochure-download">
+        <a href="files/Mandeepa.pdf" download="Mandeepa_Brochure.pdf" class="download-btn">
+            <i class="fas fa-download"></i> Download Brochure
+        </a>
+    </div>
 
 
     <!-- Footer Start -->

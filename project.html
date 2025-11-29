@@ -154,6 +154,47 @@
             border-radius: 10px;
             margin-bottom: 15px;
         }
+
+       /* Container for the switch */
+.category-switch {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+/* Base button style */
+.switch-btn {
+    padding: 10px 25px;
+    font-size: 16px;
+    font-weight: 500;
+    border: 2px solid #007bff;
+    background-color: #fff;
+    color: #007bff;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect */
+.switch-btn:hover {
+    background-color: #e6f0ff;
+    transform: translateY(-2px);
+}
+
+/* Active / Selected button */
+.switch-btn.active {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+
+
     </style>
 </head>
 
@@ -205,11 +246,10 @@
         <h1>Our Completed Projects</h1>
         <p>Parking Projects & Toll Plaza Projects</p>
     </div> -->
-    <!-- Page Header Start -->
-    <div class="container-fluid page-header py-2 mb-2 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-3">
+     <!-- Page Header Start -->
+    <div class="container-fluid page-header py-2 mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
             <h1 class="display-3 text-white animated slideInRight">Projects</h1>
-            <p class="text-white animated slideInRight">Parking Projects & Toll Plaza Projects</p>
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb animated slideInRight mb-0">
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -221,21 +261,28 @@
     </div>
     <!-- Page Header End -->
 
-    <div class="container">
+  <div class="container">
 
+    <!-- Category Switch Buttons -->
+    <div class="category-switch">
+        <button class="switch-btn" onclick="toggleProjects('parking')">Parking Projects</button>
+        <button class="switch-btn" onclick="toggleProjects('toll')">Toll Plaza Projects</button>
+    </div>
+
+    <!-- Parking Projects Section -->
+    <section id="parking-section" class="project-section">
         <h2 class="category-title">Parking Projects</h2>
         <div class="project-wrapper" id="parking-projects"></div>
+    </section>
 
-        <!-- Parking Project List -->
-
-
+    <!-- Toll Plaza Projects Section -->
+    <section id="toll-section" class="project-section">
         <h2 class="category-title">Toll Plaza Projects</h2>
         <div class="project-wrapper" id="toll-projects"></div>
+    </section>
 
-        <!-- Toll Plaza List -->
+</div>
 
-
-    </div>
 
     <!-- Popup -->
     <!-- <div class="popup" id="popup">
@@ -476,6 +523,35 @@
 
         loadProjects(parkingProjects, "parking-projects");
         loadProjects(tollProjects, "toll-projects");
+
+        function toggleProjects(type) {
+    const parkingSection = document.getElementById("parking-section");
+    const tollSection = document.getElementById("toll-section");
+
+    const btnParking = document.querySelector(".switch-btn:nth-child(1)");
+    const btnToll = document.querySelector(".switch-btn:nth-child(2)");
+
+    if (type === "parking") {
+        parkingSection.style.display = "block";
+        tollSection.style.display = "none";
+
+        btnParking.classList.add("active");
+        btnToll.classList.remove("active");
+    } else {
+        parkingSection.style.display = "none";
+        tollSection.style.display = "block";
+
+        btnParking.classList.remove("active");
+        btnToll.classList.add("active");
+    }
+}
+
+// Default on page load
+window.onload = function() {
+    toggleProjects("parking");
+};
+
+
     </script>
 
 </body>
