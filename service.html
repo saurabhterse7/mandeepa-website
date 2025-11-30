@@ -29,11 +29,148 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mandeepa Enterprises - Services</title>
+    <link rel="stylesheet" href="services.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+     /* GENERAL */
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: #f1f5f9;
+    color: #333;
+}
+
+/* HEADER */
+.hero-section {
+    text-align: center;
+    padding: 70px 20px;
+    background: linear-gradient(135deg, #004d92, #007ac8);
+    color: white;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+}
+
+.hero-section h1 {
+    font-size: 44px;
+    margin: 0;
+    font-weight: 600;
+}
+
+.hero-section p {
+    margin-top: 8px;
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* CONTAINER */
+.container {
+    width: 90%;
+    max-width: 1300px;
+    margin: auto;
+    padding: 60px 0;
+}
+
+/* GRID */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 35px;
+}
+
+/* SERVICE CARDS */
+.service-card {
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 18px;
+    border: 1px solid rgba(0,0,0,0.08);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.10);
+    transition: 0.35s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+/* MAIN HOVER ANIMATION */
+.service-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.18);
+    border-color: rgba(0, 124, 255, 0.35);
+}
+
+/* SHINE EFFECT */
+.service-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 120%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.4),
+        transparent
+    );
+    transform: skewX(-20deg);
+    transition: 0.7s;
+}
+
+.service-card:hover::after {
+    left: 120%;
+}
+
+/* ICON */
+.icon {
+    font-size: 48px;
+    color: #0071c2;
+    margin-bottom: 18px;
+    transition: 0.35s ease;
+}
+
+.service-card:hover .icon {
+    transform: translateY(-8px);
+}
+
+/* TEXT CONTENT */
+.service-card h3 {
+    margin-bottom: 12px;
+    color: #003a75;
+    font-size: 22px;
+}
+
+.desc {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 18px;
+}
+
+.features {
+    padding-left: 20px;
+    font-size: 14.5px;
+    color: #444;
+    line-height: 1.6;
+}
+
+.features li {
+    margin-bottom: 8px;
+}
+
+
+    </style>
 </head>
 
 <body>
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
     </div>
     <!-- Spinner End -->
@@ -54,7 +191,7 @@
             <div class="col-lg-6 text-end">
                 <div class="h-100 topbar-right d-inline-flex align-items-center text-white py-2 px-5">
                     <span class="fs-5 fw-bold me-2"><i class="fa fa-phone-alt me-2"></i>Call Us:</span>
-                    <span class="fs-5 fw-bold">+012 345 6789</span>
+                    <span class="fs-5 fw-bold">+91 9593480357</span>
                 </div>
             </div>
         </div>
@@ -64,18 +201,21 @@
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-0 pe-5">
-        <a href="index.html" class="navbar-brand ps-5 me-0">
-            <h1 class="text-white m-0">Industro</h1>
+        <a href="index.html" class="navbar-brand ps-0 me-0">
+            <img class="LOGO" src="img/lg.png" alt="Image">
         </a>
         <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <div class="navbar-nav ms-auto p-2 p-lg-0">
                 <a href="index.html" class="nav-item nav-link">Home</a>
                 <a href="about.html" class="nav-item nav-link">About</a>
                 <a href="service.html" class="nav-item nav-link active">Services</a>
-                <div class="nav-item dropdown">
+                <a href="project.html" class="nav-item nav-link">Projects</a>
+                <a href="socialworks.html" class="nav-item nav-link">Social Works</a>
+
+                <!-- <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu bg-light m-0">
                         <a href="project.html" class="dropdown-item">Projects</a>
@@ -84,10 +224,9 @@
                         <a href="testimonial.html" class="dropdown-item">Testimonial</a>
                         <a href="404.html" class="dropdown-item">404 Page</a>
                     </div>
-                </div>
+                </div> -->
                 <a href="contact.html" class="nav-item nav-link">Contact</a>
             </div>
-            <a href="" class="btn btn-primary px-3 d-none d-lg-block">Get A Quote</a>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -107,214 +246,143 @@
         </div>
     </div>
     <!-- Page Header End -->
+     
+       <header class="hero-section">
+        <h1>Our Professional Services</h1>
+        <p>Reliable, Efficient and Technology-driven Solutions for Modern Infrastructure.</p>
+    </header>
 
+    <div class="container">
 
-    <!-- Service Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <p class="fw-medium text-uppercase text-primary mb-2">Our Services</p>
-                <h1 class="display-5 mb-4">We Provide Best Industrial Services</h1>
+        <div class="services-grid">
+
+            <!-- Toll Management -->
+            <div class="service-card">
+                <i class="fa-solid fa-road icon"></i>
+                <h3>Toll Management</h3>
+                <p class="desc">
+                    Comprehensive end-to-end management of toll plazas ensuring smooth traffic flow, 
+                    workforce management, and efficient operations.
+                </p>
+
+                <ul class="features">
+                    <li>24/7 toll operation management</li>
+                    <li>Lane-wise manpower deployment</li>
+                    <li>Daily reporting & revenue tracking</li>
+                    <li>Traffic flow monitoring & control</li>
+                    <li>Conflict resolution & onsite coordination</li>
+                </ul>
             </div>
-            <div class="row gy-5 gx-4">
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item">
-                        <img class="img-fluid" src="img/service-1.jpg" alt="">
-                        <div class="service-img">
-                            <img class="img-fluid" src="img/service-1.jpg" alt="">
-                        </div>
-                        <div class="service-detail">
-                            <div class="service-title">
-                                <hr class="w-25">
-                                <h3 class="mb-0">Civil & Gas Engineering</h3>
-                                <hr class="w-25">
-                            </div>
-                            <div class="service-text">
-                                <p class="text-white mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
-                            </div>
-                        </div>
-                        <a class="btn btn-light" href="">Read More</a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item">
-                        <img class="img-fluid" src="img/service-2.jpg" alt="">
-                        <div class="service-img">
-                            <img class="img-fluid" src="img/service-2.jpg" alt="">
-                        </div>
-                        <div class="service-detail">
-                            <div class="service-title">
-                                <hr class="w-25">
-                                <h3 class="mb-0">Power & Energy Engineering</h3>
-                                <hr class="w-25">
-                            </div>
-                            <div class="service-text">
-                                <p class="text-white mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
-                            </div>
-                        </div>
-                        <a class="btn btn-light" href="">Read More</a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item">
-                        <img class="img-fluid" src="img/service-3.jpg" alt="">
-                        <div class="service-img">
-                            <img class="img-fluid" src="img/service-3.jpg" alt="">
-                        </div>
-                        <div class="service-detail">
-                            <div class="service-title">
-                                <hr class="w-25">
-                                <h3 class="mb-0">Plumbing & Water Treatment</h3>
-                                <hr class="w-25">
-                            </div>
-                            <div class="service-text">
-                                <p class="text-white mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
-                            </div>
-                        </div>
-                        <a class="btn btn-light" href="">Read More</a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item">
-                        <img class="img-fluid" src="img/service-1.jpg" alt="">
-                        <div class="service-img">
-                            <img class="img-fluid" src="img/service-1.jpg" alt="">
-                        </div>
-                        <div class="service-detail">
-                            <div class="service-title">
-                                <hr class="w-25">
-                                <h3 class="mb-0">Civil & Gas Engineering</h3>
-                                <hr class="w-25">
-                            </div>
-                            <div class="service-text">
-                                <p class="text-white mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
-                            </div>
-                        </div>
-                        <a class="btn btn-light" href="">Read More</a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item">
-                        <img class="img-fluid" src="img/service-2.jpg" alt="">
-                        <div class="service-img">
-                            <img class="img-fluid" src="img/service-2.jpg" alt="">
-                        </div>
-                        <div class="service-detail">
-                            <div class="service-title">
-                                <hr class="w-25">
-                                <h3 class="mb-0">Power & Energy Engineering</h3>
-                                <hr class="w-25">
-                            </div>
-                            <div class="service-text">
-                                <p class="text-white mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
-                            </div>
-                        </div>
-                        <a class="btn btn-light" href="">Read More</a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item">
-                        <img class="img-fluid" src="img/service-3.jpg" alt="">
-                        <div class="service-img">
-                            <img class="img-fluid" src="img/service-3.jpg" alt="">
-                        </div>
-                        <div class="service-detail">
-                            <div class="service-title">
-                                <hr class="w-25">
-                                <h3 class="mb-0">Plumbing & Water Treatment</h3>
-                                <hr class="w-25">
-                            </div>
-                            <div class="service-text">
-                                <p class="text-white mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
-                            </div>
-                        </div>
-                        <a class="btn btn-light" href="">Read More</a>
-                    </div>
-                </div>
+
+            <!-- Toll Collection -->
+            <div class="service-card">
+                <i class="fa-solid fa-sack-dollar icon"></i>
+                <h3>Toll Collection Management</h3>
+                <p class="desc">
+                    Secure and accurate toll collection supported by real-time monitoring, automated dashboards, 
+                    and revenue auditing systems.
+                </p>
+
+                <ul class="features">
+                    <li>Automated toll collection systems</li>
+                    <li>Cash handling & reconciliation</li>
+                    <li>CCTV-backed transaction verification</li>
+                    <li>Fraud & leakage prevention systems</li>
+                    <li>Digital reporting and analysis</li>
+                </ul>
             </div>
+
+            <!-- ETC Electronic -->
+            <div class="service-card">
+                <i class="fa-solid fa-wifi icon"></i>
+                <h3>Electronic Toll Collection (ETC)</h3>
+                <p class="desc">
+                    FASTag-based RFID tolling with seamless digital payments, real-time verification, 
+                    and automatic vehicle detection.
+                </p>
+
+                <ul class="features">
+                    <li>FASTag RFID lane management</li>
+                    <li>Automatic vehicle classification</li>
+                    <li>Digital transaction reporting</li>
+                    <li>Barrier & sensor operation</li>
+                    <li>ETC monitoring dashboards</li>
+                </ul>
+            </div>
+
+            <!-- Smart Parking -->
+            <div class="service-card">
+                <i class="fa-solid fa-square-parking icon"></i>
+                <h3>Smart Parking & Multi-Level Parking</h3>
+                <p class="desc">
+                    Modern parking solutions with automated entry systems, digital ticketing, 
+                    and multi-level parking management.
+                </p>
+
+                <ul class="features">
+                    <li>Smart IoT-based parking systems</li>
+                    <li>Real-time slot availability display</li>
+                    <li>QR & digital payment-enabled parking</li>
+                    <li>CCTV monitoring & security integration</li>
+                    <li>Multi-level parking operations</li>
+                </ul>
+            </div>
+
+            <!-- Infrastructure -->
+            <div class="service-card">
+                <i class="fa-solid fa-bridge icon"></i>
+                <h3>Infrastructure Development</h3>
+                <p class="desc">
+                    Quality-driven construction and maintenance of highways, bridges, roads, 
+                    and public utility infrastructure.
+                </p>
+
+                <ul class="features">
+                    <li>Highway construction & maintenance</li>
+                    <li>Bridge structure repairs</li>
+                    <li>Pothole-free road maintenance</li>
+                    <li>Drainage & roadside development</li>
+                    <li>Safety audit & compliance checks</li>
+                </ul>
+            </div>
+
         </div>
-    </div>
-    <!-- Service End -->
 
-
-    <!-- Testimonial Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <p class="fw-medium text-uppercase text-primary mb-2">Testimonial</p>
-                <h1 class="display-5 mb-5">What Our Clients Say!</h1>
-            </div>
-            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
-                <div class="testimonial-item text-center">
-                    <div class="testimonial-img position-relative">
-                        <img class="img-fluid rounded-circle mx-auto mb-5" src="img/testimonial-1.jpg">
-                        <div class="btn-square bg-primary rounded-circle">
-                            <i class="fa fa-quote-left text-white"></i>
-                        </div>
-                    </div>
-                    <div class="testimonial-text text-center rounded p-4">
-                        <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
-                        <h5 class="mb-1">Client Name</h5>
-                        <span class="fst-italic">Profession</span>
-                    </div>
-                </div>
-                <div class="testimonial-item text-center">
-                    <div class="testimonial-img position-relative">
-                        <img class="img-fluid rounded-circle mx-auto mb-5" src="img/testimonial-2.jpg">
-                        <div class="btn-square bg-primary rounded-circle">
-                            <i class="fa fa-quote-left text-white"></i>
-                        </div>
-                    </div>
-                    <div class="testimonial-text text-center rounded p-4">
-                        <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
-                        <h5 class="mb-1">Client Name</h5>
-                        <span class="fst-italic">Profession</span>
-                    </div>
-                </div>
-                <div class="testimonial-item text-center">
-                    <div class="testimonial-img position-relative">
-                        <img class="img-fluid rounded-circle mx-auto mb-5" src="img/testimonial-3.jpg">
-                        <div class="btn-square bg-primary rounded-circle">
-                            <i class="fa fa-quote-left text-white"></i>
-                        </div>
-                    </div>
-                    <div class="testimonial-text text-center rounded p-4">
-                        <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
-                        <h5 class="mb-1">Client Name</h5>
-                        <span class="fst-italic">Profession</span>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
-    <!-- Testimonial End -->
         
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-white mb-4">Our Office</h5>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="text-white mb-4">Our Offices</h5>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>G1, TULIP Garden, Dasodrone, Rajarhat 
+                        Main Road, 
+                        opp SBI Bank, Kolkata 700136, India.</p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>504,Dev Plaza,
+                        S.V. Road, Andheri West,
+                        Mumbai – 400058, Maharashtra, India.</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 9593480357</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>Office@mandeepa.com</p>
                     <div class="d-flex pt-3">
-                        <a class="btn btn-square btn-primary rounded-circle me-2" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square btn-primary rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-primary rounded-circle me-2" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-square btn-primary rounded-circle me-2" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-square btn-primary rounded-circle me-2" href=""><i
+                                class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square btn-primary rounded-circle me-2" href=""><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-primary rounded-circle me-2" href=""><i
+                                class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-4 col-md-6">
                     <h5 class="text-white mb-4">Quick Links</h5>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Our Services</a>
+                    <a class="btn btn-link" href="about.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="socialworks.html">Social Services</a>
                     <a class="btn btn-link" href="">Terms & Condition</a>
                     <a class="btn btn-link" href="">Support</a>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-4 col-md-6">
                     <h5 class="text-white mb-4">Business Hours</h5>
                     <p class="mb-1">Monday - Friday</p>
                     <h6 class="text-light">09:00 am - 07:00 pm</h6>
@@ -322,14 +390,6 @@
                     <h6 class="text-light">09:00 am - 12:00 pm</h6>
                     <p class="mb-1">Sunday</p>
                     <h6 class="text-light">Closed</h6>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-white mb-4">Newsletter</h5>
-                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-                    <div class="position-relative w-100">
-                        <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
-                    </div>
                 </div>
             </div>
         </div>
@@ -340,9 +400,9 @@
     <!-- Copyright Start -->
     <div class="container-fluid copyright bg-dark py-4">
         <div class="container text-center">
-            <p class="mb-2">Copyright &copy; <a class="fw-semi-bold" href="#">Your Site Name</a>, All Right Reserved.</p>
+            <p class="mb-2">Copyright &copy; <a class="fw-semi-bold" href="#">mandeepa.com</a>, All Right Reserved.</p>
             <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-            <p class="mb-0">Designed By <a class="fw-semi-bold" href="https://htmlcodex.com">HTML Codex</a></p>
+            <p class="mb-0">Designed By <a class="fw-semi-bold" href="">CCONCEPTS DESIGNERS</a></p>
         </div>
     </div>
     <!-- Copyright End -->
