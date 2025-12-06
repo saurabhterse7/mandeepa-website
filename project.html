@@ -44,7 +44,7 @@
         }
 
         .header {
-            background-color: #0d6efd;
+            background-color: #8ed4f5;
             padding: 20px;
             text-align: center;
             color: white;
@@ -59,8 +59,8 @@
         .category-title {
             font-size: 26px;
             margin: 20px 0;
-            color: #0d6efd;
-            border-left: 5px solid #0d6efd;
+            color: #5ec7f7;
+            border-left: 5px solid #5ec7f7;
             padding-left: 10px;
         }
 
@@ -76,7 +76,7 @@
         .project-title {
             font-size: 20px;
             font-weight: bold;
-            color: #0d6efd;
+            color: #5ec7f7;
         }
 
         .project-wrapper {
@@ -155,45 +155,92 @@
             margin-bottom: 15px;
         }
 
-       /* Container for the switch */
-.category-switch {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 30px;
-    flex-wrap: wrap;
-}
+        /* Container for the switch */
+        .category-switch {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
 
-/* Base button style */
-.switch-btn {
-    padding: 10px 25px;
-    font-size: 16px;
-    font-weight: 500;
-    border: 2px solid #007bff;
-    background-color: #fff;
-    color: #007bff;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-}
+        /* Base button style */
+        .switch-btn {
+            padding: 10px 25px;
+            font-size: 16px;
+            font-weight: 500;
+            border: 2px solid #AADAF0;
+            background-color: #8c8e92;
+            color: #ffffff;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+        }
 
-/* Hover effect */
-.switch-btn:hover {
-    background-color: #e6f0ff;
-    transform: translateY(-2px);
-}
+        /* Hover effect */
+        .switch-btn:hover {
+            background-color: #8c8e92;
+            transform: translateY(-2px);
+        }
 
-/* Active / Selected button */
-.switch-btn.active {
-    background-color: #007bff;
-    color: #fff;
-    border-color: #007bff;
-    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3);
-    transform: translateY(-2px);
-}
+        /* Active / Selected button */
+        .switch-btn.active {
+            background-color: #AADAF0;
+            color: #8c8e92;
+            border-color: #AADAF0;
+            box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3);
+            transform: translateY(-2px);
+        }
 
+        .excel-table-section {
+            padding: 40px 15px;
+        }
 
+        .table-title {
+            text-align: center;
+            font-size: 26px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 25px;
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+        }
+
+        .excel-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            font-size: 15px;
+            min-width: 600px;
+        }
+
+        .excel-table thead {
+            background: #AADAF0;
+            color: #000000;
+        }
+
+        .excel-table th,
+        .excel-table td {
+            padding: 12px 15px;
+            border: 1px solid #d0d0d0;
+            text-align: left;
+        }
+
+        .excel-table tbody tr:nth-child(even) {
+            background: #f5f5f5;
+        }
+
+        .excel-table tbody tr:hover {
+            background: #e8f7f7;
+            transition: 0.2s;
+        }
+
+        .excel-table td:nth-child(1) {
+            text-align: center;
+        }
 
     </style>
 </head>
@@ -247,7 +294,7 @@
         <h1>Our Completed Projects</h1>
         <p>Parking Projects & Toll Plaza Projects</p>
     </div> -->
-     <!-- Page Header Start -->
+    <!-- Page Header Start -->
     <div class="container-fluid page-header py-2 mb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <h1 class="display-3 text-white animated slideInRight">Projects</h1>
@@ -262,27 +309,208 @@
     </div>
     <!-- Page Header End -->
 
-  <div class="container">
+    <div class="container">
 
-    <!-- Category Switch Buttons -->
-    <div class="category-switch">
-        <button class="switch-btn" onclick="toggleProjects('parking')">Parking Projects</button>
-        <button class="switch-btn" onclick="toggleProjects('toll')">Toll Plaza Projects</button>
+        <!-- Category Switch Buttons -->
+        <div class="category-switch">
+            <button class="switch-btn" onclick="toggleProjects('parking')">Parking Projects</button>
+            <button class="switch-btn" onclick="toggleProjects('toll')">Toll Plaza Projects</button>
+        </div>
+
+        <!-- Parking Projects Section -->
+        <section id="parking-section" class="project-section">
+            <h2 class="category-title">Parking Projects</h2>
+            <div class="project-wrapper" id="parking-projects"></div>
+            <section class="excel-table-section">
+                <h2 class="table-title">Ongoing Projects</h2>
+<div class="table-wrapper">
+                    <table class="excel-table">
+                        <thead>
+                            <tr>
+                                <th>Sr No</th>
+                                <th>Client</th>
+                                <th>Location</th>
+                                <th>Principle Employer</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Mulund PPL</td>
+                                <td>MUMBAI</td>
+                                <td>MCGM</td>
+                            </tr>
+
+                            <tr>
+                                <td>2</td>
+                                <td>Village Oshiwara PPL</td>
+                                <td>MUMBAI</td>
+                                <td>MCGM</td>
+                            </tr>
+
+                            <tr>
+                                <td>3</td>
+                                <td>Sewree PPL</td>
+                                <td>MUMBAI</td>
+                                <td>MCGM</td>
+                            </tr>
+                             <tr>
+                                <td>4</td>
+                                <td>Lodha PPL</td>
+                                <td>MUMBAI</td>
+                                <td>MCGM</td>
+                            </tr>
+                             <tr>
+                                <td>5</td>
+                                <td>Indiabulls PPL</td>
+                                <td>MUMBAI</td>
+                                <td>MCGM</td>
+                            </tr>
+                             <tr>
+                                <td>6</td>
+                                <td>Shreeniwas PPL</td>
+                                <td>MUMBAI</td>
+                                <td>MCGM</td>
+                            </tr>
+                             <tr>
+                                <td>7</td>
+                                <td>Jupiter PPL</td>
+                                <td>MUMBAI</td>
+                                <td>MCGM</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+            </section>
+
+        </section>
+
+        <!-- Toll Plaza Projects Section -->
+        <section id="toll-section" class="project-section">
+            <h2 class="category-title">Toll Plaza Projects</h2>
+            <div class="project-wrapper" id="toll-projects"></div>
+            <section class="excel-table-section">
+                <h2 class="table-title">Ongoing Projects</h2>
+<div class="table-wrapper">
+                    <table class="excel-table">
+                        <thead>
+                            <tr>
+                                <th>Sr No</th>
+                                <th>Client</th>
+                                <th>Location</th>
+                                <th>Principle Employer</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Ayespur Toll Plaza</td>
+                                <td>West Bengal</td>
+                                <td>RSRDC</td>
+                            </tr>
+
+                            <tr>
+                                <td>2</td>
+                                <td>Jaloli Toll Plaza</td>
+                                <td>West Bengal</td>
+                                <td>RSRDC</td>
+                            </tr>
+
+                            <tr>
+                                <td>3</td>
+                                <td>Jharpokhria Toll Plaza</td>
+                                <td>West Bengal</td>
+                                <td>NHAI</td>
+                            </tr>
+                             <tr>
+                                <td>4</td>
+                                <td>Khireitangiri Toll Plaza</td>
+                                <td>Haryana</td>
+                                <td>NHAI</td>
+                            </tr>
+                             <tr>
+                                <td>5</td>
+                                <td>Raje Toll Plaza</td>
+                                <td>Odisha</td>
+                                <td>NHAI</td>
+                            </tr>
+                             <tr>
+                                <td>6</td>
+                                <td>Tatiyawas Toll Plaza</td>
+                                <td>Odisha</td>
+                                <td>NHAI</td>
+                            </tr>
+                             <tr>
+                                <td>7</td>
+                                <td>Pottipadu Toll Plaza</td>
+                                <td>Rajasthan</td>
+                                <td>NHAI</td>
+                            </tr>
+                             <tr>
+                                <td>8</td>
+                                <td>Panthangi Toll Plaza</td>
+                                <td>Andhra Pradesh</td>
+                                <td>NHAI</td>
+                            </tr>
+                             <tr>
+                                <td>9</td>
+                                <td>Boothakudi Toll Plaza</td>
+                                <td>Tamil Nadu</td>
+                                <td>NHAI</td>
+                            </tr>
+                             <tr>
+                                <td>10</td>
+                                <td>Sali Bamandanga Toll Plaza</td>
+                                <td>Telangana & Andhra Pradesh</td>
+                                <td>NHAI</td>
+                            </tr>
+                            <tr>
+                                <td>11</td>
+                                <td>Lamber & Ujroo Toll Plaza</td>
+                                <td>West Bengal</td>
+                                <td>NHAI</td>
+                            </tr>
+                            <tr>
+                                <td>12</td>
+                                <td>Gouranga Setu Toll Plaza</td>
+                                <td>Odisha</td>
+                                <td>NHAI</td>
+                            </tr>
+                            <tr>
+                                <td>13</td>
+                                <td>Sangajata Toll Plaza</td>
+                                <td>Jammu & Kashmir</td>
+                                <td>PWD</td>
+                            </tr>
+                            <tr>
+                                <td>14</td>
+                                <td>Shahpura Toll Plaza</td>
+                                <td>West Bengal</td>
+                                <td>RCD</td>
+                            </tr>
+                            <tr>
+                                <td>15</td>
+                                <td>Malpura Toll Plaza</td>
+                                <td>Jharkhand</td>
+                                <td>RSRDC</td>
+                            </tr>
+                            <tr>
+                                <td>16</td>
+                                <td>Kekri Toll Plaza</td>
+                                <td>Jharkhand</td>
+                                <td>RSRDC</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+            </section>
+        </section>
+
     </div>
-
-    <!-- Parking Projects Section -->
-    <section id="parking-section" class="project-section">
-        <h2 class="category-title">Parking Projects</h2>
-        <div class="project-wrapper" id="parking-projects"></div>
-    </section>
-
-    <!-- Toll Plaza Projects Section -->
-    <section id="toll-section" class="project-section">
-        <h2 class="category-title">Toll Plaza Projects</h2>
-        <div class="project-wrapper" id="toll-projects"></div>
-    </section>
-
-</div>
 
 
     <!-- Popup -->
@@ -311,8 +539,8 @@
             <div class="row g-5">
                 <div class="col-lg-4 col-md-6">
                     <h5 class="text-white mb-4">Our Offices</h5>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>G1, TULIP Garden, Dasodrone, Rajarhat 
-                        Main Road, 
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>G1, TULIP Garden, Dasodrone, Rajarhat
+                        Main Road,
                         opp SBI Bank, Kolkata 700136, India.</p>
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>504,Dev Plaza,
                         S.V. Road, Andheri West,
@@ -385,14 +613,7 @@
             { title: "Valsad Railway Station", image: "img/parking/TOLL3.jpg", desc: "Modernized parking system at Valsad." },
             { title: "MCGM Kalina PPL", image: "img/parking/TOLL4.jpg", desc: "Kalina Pay & Park Location under MCGM." },
             { title: "MCGM Mumbai Textile PPL", image: "img/parking/TOLL5.jpg", desc: "Parking facility at Mumbai Textile Mill area." },
-            { title: "India Bull PPL", image: "img/parking/TOLL1.jpg", desc: "Managed parking operations at India Bull." },
-            { title: "Vapi Station", image: "img/parking/vapi_station.jpg", desc: "Parking project at Vapi Railway Station." },
-            { title: "Bagdogra Airport Parking", image: "img/parking/bagdogra_airport.jpg", desc: "Airport parking automation at Bagdogra." },
-            { title: "MCGM Sewri PPL", image: "img/parking/sewri_ppl.jpg", desc: "Parking lot modernization at Sewri." },
-            { title: "MCGM Shreeniwas Cotton Mill PPL", image: "img/parking/shreeniwas_ppl.jpg", desc: "Pay & Park facility at Shreeniwas Cotton Mill." },
-            { title: "MCGM Jupiter Mill PPL", image: "img/parking/jupiter_mill_ppl.jpg", desc: "Parking facility at Jupiter Mill." },
-            { title: "Kalina Mumbai", image: "img/parking/kalina_mumbai.jpg", desc: "Parking improvements in Kalina." },
-            { title: "Mulund Mumbai", image: "img/parking/mulund_mumbai.jpg", desc: "Parking development work in Mulund." }
+            { title: "India Bull PPL", image: "img/parking/TOLL1.jpg", desc: "Managed parking operations at India Bull." }
         ];
         // const parkingProjects = [
         //     "Pune Airport", "Puri Railway Station", "Valsad Railway Station", "MCGM Kalina PPL",
@@ -404,64 +625,13 @@
         // Toll plaza projects with images
         // Toll plaza projects with images
         const tollProjects = [
-            { title: "Badagunguti Toll Plaza", image: "img/toll/TOLL1.jpg", desc: "Toll plaza project completed successfully." },
-            { title: "Bangriposi Toll Plaza", image: "img/toll/TOLL2.jpg", desc: "Toll plaza project completed successfully." },
-            { title: "Pipli Toll Plaza", image: "img/toll/TOLL3.jpg", desc: "Toll plaza project completed successfully." },
-            { title: "Keonjhar Toll Plaza", image: "img/toll/TOLL4.jpg", desc: "Toll plaza project completed successfully." },
-            { title: "Nalda Toll Plaza", image: "img/toll/TOLL5.jpg", desc: "Toll plaza project completed successfully." },
-            { title: "Tomka Toll Plaza", image: "img/toll/TOLL6.jpg", desc: "Toll plaza project completed successfully." },
-            { title: "Toda Toll Plaza", image: "img/toll/toda.jpg", desc: "Toll plaza project completed successfully." },
-            { title: "Barsoni Toll Plaza", image: "img/toll/barsoni.jpg", desc: "Toll plaza project completed successfully." },
-            { title: "Keezhkuppam Toll Plaza", image: "img/toll/keezhkuppam.jpg", desc: "Toll plaza project completed successfully." },
-            { title: "Zidda Toll Plaza", image: "img/toll/zdida.jpg", desc: "Toll plaza project completed successfully." },
-            { title: "Azizpur Toll Plaza", image: "img/toll/azizpur.jpg", desc: "Toll plaza project completed successfully." },
-            { title: "Jawharnagar Toll Plaza", image: "img/toll/jawharnagar.jpg", desc: "Toll plaza project completed successfully." },
-            { title: "Eliyarpathi Toll Plaza", image: "img/toll/eliyarpathi.jpg", desc: "Toll plaza project completed successfully." },
-            { title: "Kandra Toll Plaza (Adityapur)", image: "img/toll/kandra_adityapur.jpg", desc: "Toll plaza project completed successfully." },
-            { title: "Baloh Toll Plaza", image: "img/toll/baloh.jpg", desc: "Toll plaza project completed successfully." },
-            { title: "Milk Majra Toll Plaza", image: "img/toll/milk_majra.jpg", desc: "Toll plaza project completed successfully." },
-            { title: "Pokhraira Toll Plaza", image: "img/toll/pokhraira.jpg", desc: "Toll plaza project completed successfully." },
-            { title: "Saidpur Patedha Toll Plaza", image: "img/toll/saidpur_patedha.jpg", desc: "Toll plaza project completed successfully." },
-            { title: "Jaloli Toll Plaza", image: "img/toll/jaloli.jpg", desc: "Toll plaza project completed successfully." },
-            { title: "Kalajhar Toll Plaza", image: "img/toll/kalajhar.jpg", desc: "Toll plaza project completed successfully." },
-            { title: "Ayespur Toll Plaza", image: "img/toll/ayespur.jpg", desc: "Toll plaza project completed successfully." },
-            { title: "Gudipada Toll Plaza", image: "img/toll/gudipada.jpg", desc: "Toll plaza project completed successfully." },
-            { title: "Jharpokhria Toll Plaza", image: "img/toll/jharpokhria.jpg", desc: "Toll plaza project completed successfully." },
-            { title: "Mathur Toll Plaza", image: "img/toll/mathur.jpg", desc: "Toll plaza project completed successfully." },
-            { title: "Nathavalsa Toll Plaza", image: "img/toll/nathavalsa.jpg", desc: "Toll plaza project completed successfully." },
-            { title: "Barai Toll Plaza", image: "img/toll/barai.jpg", desc: "Toll plaza project completed successfully." },
-            { title: "Kishangarh Toll Plaza", image: "img/toll/kishangarh.jpg", desc: "Toll plaza project completed successfully." },
-            { title: "Rangalibazna Toll Plaza", image: "img/toll/rangalibazna.jpg", desc: "Toll plaza project completed successfully." },
-            { title: "Guabari Toll Plaza", image: "img/toll/guabari.jpg", desc: "Toll plaza project completed successfully." },
-            { title: "Husludanga Toll Plaza", image: "img/toll/husludanga.jpg", desc: "Toll plaza project completed successfully." },
-            { title: "Dankuni Toll Plaza", image: "img/toll/dankuni.jpg", desc: "Toll plaza project completed successfully." },
-            { title: "Palsit Toll Plaza", image: "img/toll/palsit.jpg", desc: "Toll plaza project completed successfully." },
-            { title: "Gourangasetu Toll Plaza", image: "img/toll/gourangasetu.jpg", desc: "Toll plaza project completed successfully." },
-            { title: "Bartana Toll Plaza", image: "img/toll/bartana.jpg", desc: "Toll plaza project completed successfully." },
-            { title: "Balivasa Toll Plaza", image: "img/toll/balivasa.jpg", desc: "Toll plaza project completed successfully." },
-            { title: "Tatiyawas Toll Plaza", image: "img/toll/tatiyawas.jpg", desc: "Toll plaza project completed successfully." },
-            { title: "Renewal Toll Plaza", image: "img/toll/renewal.jpg", desc: "Toll plaza project completed successfully." },
-            { title: "Malpura Toll Plaza", image: "img/toll/malpura.jpg", desc: "Toll plaza project completed successfully." },
-            { title: "Kekri Toll Plaza", image: "img/toll/kekri.jpg", desc: "Toll plaza project completed successfully." },
-            { title: "Sahpura Toll Plaza", image: "img/toll/sahpura.jpg", desc: "Toll plaza project completed successfully." },
-            { title: "Hauj Toll Plaza", image: "img/toll/hauj.jpg", desc: "Toll plaza project completed successfully." },
-            { title: "Pratappur Toll Plaza", image: "img/toll/pratappur.jpg", desc: "Toll plaza project completed successfully." },
-            { title: "Atraila Shiv Gudam Toll Plaza", image: "img/toll/atraila_shiv_gudam.jpg", desc: "Toll plaza project completed successfully." },
-            { title: "Kariyamangalam Toll Plaza", image: "img/toll/kariyamangalam.jpg", desc: "Toll plaza project completed successfully." },
-            { title: "Nangalikondan Toll Plaza", image: "img/toll/nangalikondan.jpg", desc: "Toll plaza project completed successfully." },
-            { title: "Banajodi Toll Plaza", image: "img/toll/banajodi.jpg", desc: "Toll plaza project completed successfully." },
-            { title: "Bideibadkudar Toll Plaza", image: "img/toll/bideibadkudar.jpg", desc: "Toll plaza project completed successfully." },
-            { title: "Nimgaon Khalu Toll Plaza", image: "img/toll/nimgaon_khalu.jpg", desc: "Toll plaza project completed successfully." },
-            { title: "Kappaluru Toll Plaza", image: "img/toll/kappaluru.jpg", desc: "Toll plaza project completed successfully." },
-            { title: "Salaipudur Toll Plaza", image: "img/toll/salaipudur.jpg", desc: "Toll plaza project completed successfully." },
-            { title: "Kezkuppam Toll Plaza", image: "img/toll/kezkuppam.jpg", desc: "Toll plaza project completed successfully." },
-            { title: "Durgamvari Palli Toll Plaza", image: "img/toll/durgamvari_palli.jpg", desc: "Toll plaza project completed successfully." },
-            { title: "Pottipadu Toll Plaza", image: "img/toll/pottipadu.jpg", desc: "Toll plaza project completed successfully." },
-            { title: "Kandra Toll Plaza", image: "img/toll/kandra.jpg", desc: "Toll plaza project completed successfully." },
-            { title: "Giddhibera Toll Plaza", image: "img/toll/giddhibera.jpg", desc: "Toll plaza project completed successfully." },
-            { title: "Sangajata Toll Plaza", image: "img/toll/sangajata.jpg", desc: "Toll plaza project completed successfully." },
-            { title: "Moura Toll Plaza", image: "img/toll/moura.jpg", desc: "Toll plaza project completed successfully." }
-        ];
+            { title: "Sahpura Toll Plaza", image: "img/toll/Sahapura toll 1.png", desc: "Toll plaza project completed successfully." },
+            { title: "Ayespur Toll Plaza", image: "img/toll/Ayespur Toll Plaza 2.png", desc: "Toll plaza project completed successfully." },
+            { title: "Barai Toll Plaza", image: "img/toll/Barai toll plaza 1.png", desc: "Toll plaza project completed successfully." },
+            { title: "Boothakudi Toll Plaza", image: "img/toll/boothakudi 1.png", desc: "Toll plaza project completed successfully." },
+            { title: "Kishangarh Toll Plaza", image: "img/toll/Kishangarh Toll_Naka.png", desc: "Toll plaza project completed successfully." },
+            { title: "Badagunguti Toll Plaza", image: "img/toll/Kishangrah 2.png", desc: "Toll plaza project completed successfully." },
+            ];
 
 
         function loadProjects(list, containerId) {
@@ -526,31 +696,31 @@
         loadProjects(tollProjects, "toll-projects");
 
         function toggleProjects(type) {
-    const parkingSection = document.getElementById("parking-section");
-    const tollSection = document.getElementById("toll-section");
+            const parkingSection = document.getElementById("parking-section");
+            const tollSection = document.getElementById("toll-section");
 
-    const btnParking = document.querySelector(".switch-btn:nth-child(1)");
-    const btnToll = document.querySelector(".switch-btn:nth-child(2)");
+            const btnParking = document.querySelector(".switch-btn:nth-child(1)");
+            const btnToll = document.querySelector(".switch-btn:nth-child(2)");
 
-    if (type === "parking") {
-        parkingSection.style.display = "block";
-        tollSection.style.display = "none";
+            if (type === "parking") {
+                parkingSection.style.display = "block";
+                tollSection.style.display = "none";
 
-        btnParking.classList.add("active");
-        btnToll.classList.remove("active");
-    } else {
-        parkingSection.style.display = "none";
-        tollSection.style.display = "block";
+                btnParking.classList.add("active");
+                btnToll.classList.remove("active");
+            } else {
+                parkingSection.style.display = "none";
+                tollSection.style.display = "block";
 
-        btnParking.classList.remove("active");
-        btnToll.classList.add("active");
-    }
-}
+                btnParking.classList.remove("active");
+                btnToll.classList.add("active");
+            }
+        }
 
-// Default on page load
-window.onload = function() {
-    toggleProjects("parking");
-};
+        // Default on page load
+        window.onload = function () {
+            toggleProjects("parking");
+        };
 
 
     </script>
