@@ -196,7 +196,7 @@ h6,
     bottom: 0;
     display: flex;
     align-items: center;
-    background: linear-gradient(to right, rgba(2, 36, 91, 1) 0%, rgba(2, 36, 91, 0) 100%);
+    /* background: linear-gradient(to right, rgba(2, 36, 91, 1) 0%, rgba(2, 36, 91, 0) 100%); */
     z-index: 1;
 }
 
@@ -713,7 +713,6 @@ h6,
     background: #fff;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 4px 12px;
-    text-align: center;
 }
 
 .mission-section h2 {
