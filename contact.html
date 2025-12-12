@@ -196,51 +196,43 @@
     <!-- Page Header End -->
 
     <div class="brochure-download">
-        <a href="files/Mandeepa.pdf" download="Mandeepa_Brochure.pdf" class="download-btn">
+        <a href="files/Mandeepa.pdf" download="Mandeepa Realm Ltd.pdf" class="download-btn">
             <i class="fas fa-download"></i> Download Brochure
         </a>
     </div>
     <!-- Contact Start -->
     <div class="container-xxl">
         <div class="container">
-            <div class="row g-5 justify-content-center mb-5">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="bg-light text-center h-100 p-5">
-                        <div class="btn-square bg-white rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
-                            <i class="fa fa-phone-alt fa-2x text-primary" style="color: #437f76 !important;"></i>
-                        </div>
-                        <h4 class="mb-3">Phone Number</h4>
-                        <p class="mb-2">+91 9939033903</p>
-                        <p class="mb-4"></p>
-                        <a class="btn btn-primary px-4" href="tel:+0123456789">Call Now <i
-                                class="fa fa-arrow-right ms-2"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="bg-light text-center h-100 p-5">
-                        <div class="btn-square bg-white rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
-                            <i class="fa fa-envelope-open fa-2x text-primary" style="color: #437f76 !important;"></i>
-                        </div>
-                        <h4 class="mb-3">Email Address</h4>
-                        <p class="mb-2">mrl@mandeepa.com</p>
-                        <p class="mb-4"></p>
+            <div class="row g-4 justify-content-center mb-5">
 
-                        <a class="btn btn-primary px-4" href="mailto:info@example.com">Email Now <i
-                                class="fa fa-arrow-right ms-2"></i></a>
-                    </div>
-                </div>
-                <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="bg-light text-center h-100 p-5">
-                        <div class="btn-square bg-white rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
-                            <i class="fa fa-map-marker-alt fa-2x text-primary" style="color: #437f76 !important;"></i>
-                        </div>
-                        <h4 class="mb-3">Office Address</h4>
-                        <p class="mb-4">Kolkata-700136</p>
-                        <a class="btn btn-primary px-4" href="https://maps.google.com/maps?q=Unit%20G1%2C%20Tulip%20Garden%2C%20Dasodrone%2C%20%20Rajarhat%20Main%20Road%2C%20Opp%20SBI%20Bank%2C%20%20Kolkata%20700136&t=m&z=10&output=embed&iwloc=near"
-                            target="blank"> <i class="fa fa-arrow-right ms-2"></i></a>
-                    </div>
-                </div> -->
+    <!-- Phone -->
+    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="contact-card">
+            <div class="contact-icon">
+                <i class="fa fa-phone-alt fa-2x"></i>
             </div>
+            <h4 class="contact-title">Phone Number</h4>
+            <p class="contact-value">+91 9939033903</p>
+            <a class="btn contact-btn" href="tel:+919939033903">
+                Call Now <i class="fa fa-arrow-right ms-2"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Email -->
+    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+        <div class="contact-card">
+            <div class="contact-icon">
+                <i class="fa fa-envelope-open fa-2x"></i>
+            </div>
+            <h4 class="contact-title">Email Address</h4>
+            <p class="contact-value">mrl@mandeepa.com</p>
+            <a class="btn contact-btn" href="mailto:mrl@mandeepa.com">
+                Email Now <i class="fa fa-arrow-right ms-2"></i>
+            </a>
+        </div>
+    </div>
+</div>
             <div class="row mb-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <h4 class="mb-3">Regd.Office: </h4>
@@ -400,6 +392,29 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script>
+document.getElementById("contactForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    fetch("https://script.google.com/macros/s/AKfycby51DsujMBsGKdqp1HazayhyFxZSGlMUrWo26loZM2MA3Qwp8FsVxnKXHVXoXy3rTRr/exechttps://script.google.com/macros/s/AKfycby51DsujMBsGKdqp1HazayhyFxZSGlMUrWo26loZM2MA3Qwp8FsVxnKXHVXoXy3rTRr/exec", {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            subject: document.getElementById("subject").value,
+            message: document.getElementById("message").value
+        })
+    });
+    
+    alert("Saved Successfully!");
+    document.getElementById("contactForm").reset();
+});
+</script>
+
 </body>
 
 </html>
