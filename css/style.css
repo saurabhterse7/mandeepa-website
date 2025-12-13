@@ -729,6 +729,8 @@ h6,
     font-size: 18px;
     line-height: 1.6;
     color: #444;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 
@@ -901,5 +903,5 @@ h6,
 .about-text p {
     text-align: justify;
     text-justify: inter-word;
-    line-height: 1.8;
+    line-height: 1.6;
 }
