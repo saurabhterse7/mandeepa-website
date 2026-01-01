@@ -31,6 +31,7 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    
 
 </head>
 
@@ -583,7 +584,7 @@
                 <div class="col-lg-4 col-md-6">
                     <h5 class="text-white mb-4">Our Offices</h5>
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Regd.Office: 504,Dev Plaza, 5th floor, Opp. Andheri Fire Bridge, S.V. Road, Andheri West, Mumbai – 400058, Maharashtra, India.</p>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Corp.Office: Plot No. AA-IIB-3255, Street No.508, 4th Floor, New Town, Kolkata - 700161.  </p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Corp.Office: Mandeepa realm , Plot No. AA-IIB-3255, Street No.508, New Town, Kolkata - 700161  </p>
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 9939053905</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>mrl@mandeepa.com</p>
                     <div class="d-flex pt-3">
@@ -602,6 +603,11 @@
                     <a class="btn btn-link" href="socialworks.html">Social Services</a>
                     <a class="btn btn-link" href="service.html">Our Services</a>
                     <a class="btn btn-link" href="project.html">Projects</a>
+                    <a class="btn btn-link" 
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSevOL_MfMcr95ltE8BvZvo4yQL1ASymWAkElHlPewBL3ivqUQ/viewform?usp=preview"
+   target="_blank"
+   rel="noopener noreferrer">Careers</a>
+
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <p class="mb-1">Monday - Saturday</p>
@@ -613,6 +619,21 @@
         </div>
     </div>
     <!-- Footer End -->
+
+    <!-- Popup background -->
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <span class="close" onclick="closeForm()">&times;</span>
+
+        <!-- Google Form -->
+        <iframe 
+            src="https://docs.google.com/forms/d/e/1FAIpQLSevOL_MfMcr95ltE8BvZvo4yQL1ASymWAkElHlPewBL3ivqUQ/viewform?usp=preview" 
+            width="100%" 
+            height="500" 
+            frameborder="0">
+        </iframe>
+    </div>
+</div>
 
 
 
@@ -633,7 +654,16 @@
     <script src="lib/counterup/counterup.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="js/main.js">
+        function openForm() {
+    document.getElementById("popup").style.display = "block";
+}
+
+function closeForm() {
+    document.getElementById("popup").style.display = "none";
+}
+
+    </script>
 </body>
 
 </html>
