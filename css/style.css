@@ -906,3 +906,23 @@ h6,
     line-height: 1.6;
 }
 
+.mission-list {
+            list-style-type: square;
+            padding-left: 20px;
+            
+        }
+
+        .mission-list li {
+            color: #000;
+            /* text color */
+            margin-bottom: 10px;
+            text-align: justify;
+    text-justify: inter-word;
+    line-height: 1.6;
+        }
+
+        .mission-list li::marker {
+            color: skyblue;
+            /* bullet color */
+        }
+

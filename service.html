@@ -14,7 +14,9 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Rubik:wght@500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Rubik:wght@500;600;700&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -30,7 +32,7 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 
-    
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mandeepa Enterprises - Services</title>
@@ -38,138 +40,134 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
-     /* GENERAL */
-body {
-    margin: 0;
-    font-family: "Poppins", sans-serif;
-    background: #f1f5f9;
-    color: #333;
-}
+        /* GENERAL */
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            background: #f1f5f9;
+            color: #333;
+        }
 
-/* HEADER */
-.hero-section {
-    text-align: center;
-    padding: 70px 20px;
-    background: linear-gradient(135deg, #004d92, #007ac8);
-    color: white;
-    border-bottom-left-radius: 40px;
-    border-bottom-right-radius: 40px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
-}
+        /* HEADER */
+        .hero-section {
+            text-align: center;
+            padding: 70px 20px;
+            background: linear-gradient(135deg, #004d92, #007ac8);
+            color: white;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+        }
 
-.hero-section h1 {
-    font-size: 44px;
-    margin: 0;
-    font-weight: 600;
-}
+        .hero-section h1 {
+            font-size: 44px;
+            margin: 0;
+            font-weight: 600;
+        }
 
-.hero-section p {
-    margin-top: 8px;
-    font-size: 18px;
-    opacity: 0.9;
-}
+        .hero-section p {
+            margin-top: 8px;
+            font-size: 18px;
+            opacity: 0.9;
+        }
 
-/* CONTAINER */
-.container {
-    width: 90%;
-    max-width: 1300px;
-    margin: auto;
-    padding: 60px 0;
-}
+        /* CONTAINER */
+        .container {
+            width: 90%;
+            max-width: 1300px;
+            margin: auto;
+            padding: 60px 0;
+        }
 
-/* GRID */
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 35px;
-}
+        /* GRID */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+        }
 
-/* SERVICE CARDS */
-.service-card {
-    background: #ffffff;
-    padding: 35px;
-    border-radius: 18px;
-    border: 1px solid rgba(0,0,0,0.08);
-    box-shadow: 0 12px 28px rgba(0,0,0,0.10);
-    transition: 0.35s ease;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-}
+        /* SERVICE CARDS */
+        .service-card {
+            background: #ffffff;
+            padding: 35px;
+            border-radius: 18px;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.10);
+            transition: 0.35s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
 
-/* MAIN HOVER ANIMATION */
-.service-card:hover {
-    transform: translateY(-12px);
-    box-shadow: 0 20px 50px rgba(0,0,0,0.18);
-    border-color: rgba(0, 124, 255, 0.35);
-}
+        /* MAIN HOVER ANIMATION */
+        .service-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+            border-color: rgba(0, 124, 255, 0.35);
+        }
 
-/* SHINE EFFECT */
-.service-card::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -120%;
-    width: 120%;
-    height: 100%;
-    background: linear-gradient(
-        120deg,
-        transparent,
-        rgba(255,255,255,0.4),
-        transparent
-    );
-    transform: skewX(-20deg);
-    transition: 0.7s;
-}
+        /* SHINE EFFECT */
+        .service-card::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -120%;
+            width: 120%;
+            height: 100%;
+            background: linear-gradient(120deg,
+                    transparent,
+                    rgba(255, 255, 255, 0.4),
+                    transparent);
+            transform: skewX(-20deg);
+            transition: 0.7s;
+        }
 
-.service-card:hover::after {
-    left: 120%;
-}
+        .service-card:hover::after {
+            left: 120%;
+        }
 
-/* ICON */
-.icon {
-    font-size: 48px;
-    color: #0071c2;
-    margin-bottom: 18px;
-    transition: 0.35s ease;
-}
+        /* ICON */
+        .icon {
+            font-size: 48px;
+            color: #0071c2;
+            margin-bottom: 18px;
+            transition: 0.35s ease;
+        }
 
-.service-card:hover .icon {
-    transform: translateY(-8px);
-}
+        .service-card:hover .icon {
+            transform: translateY(-8px);
+        }
 
-/* TEXT CONTENT */
-.service-card h3 {
-    margin-bottom: 12px;
-    color: #003a75;
-    font-size: 22px;
-}
+        /* TEXT CONTENT */
+        .service-card h3 {
+            margin-bottom: 12px;
+            color: #003a75;
+            font-size: 22px;
+        }
 
-.desc {
-    font-size: 15px;
-    line-height: 1.6;
-    color: #555;
-    margin-bottom: 18px;
-}
+        .desc {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 18px;
+        }
 
-.features {
-    padding-left: 20px;
-    font-size: 14.5px;
-    color: #444;
-    line-height: 1.6;
-    list-style-type: square;
-}
+        .features {
+            padding-left: 20px;
+            font-size: 14.5px;
+            color: #444;
+            line-height: 1.6;
+            list-style-type: square;
+        }
 
-.features li {
-    margin-bottom: 8px;
-}
+        .features li {
+            margin-bottom: 8px;
+        }
 
-.features li::marker {
+        .features li::marker {
             color: skyblue;
             /* bullet color */
         }
-
-
     </style>
 </head>
 
@@ -229,8 +227,8 @@ body {
         </div>
     </div>
     <!-- Page Header End -->
-     
-       <header class="hero-section">
+
+    <header class="hero-section">
         <h1>Our Professional Services</h1>
         <p>Reliable, Efficient and Technology-driven Solutions for Modern Infrastructure.</p>
     </header>
@@ -244,7 +242,7 @@ body {
                 <i class="fa-solid fa-road icon"></i>
                 <h3>Toll Management</h3>
                 <p class="desc">
-                    Comprehensive end-to-end management of toll plazas ensuring smooth traffic flow, 
+                    Comprehensive end-to-end management of toll plazas ensuring smooth traffic flow,
                     workforce management, and efficient operations.
                 </p>
 
@@ -262,7 +260,7 @@ body {
                 <i class="fa-solid fa-wifi icon"></i>
                 <h3>Electronic Toll Collection (ETC)</h3>
                 <p class="desc">
-                    FASTag-based RFID tolling with seamless digital payments, real-time verification, 
+                    FASTag-based RFID tolling with seamless digital payments, real-time verification,
                     and automatic vehicle detection.
                 </p>
 
@@ -280,7 +278,7 @@ body {
                 <i class="fa-solid fa-square-parking icon"></i>
                 <h3>Smart Parking & Multi-Level Parking</h3>
                 <p class="desc">
-                    Modern parking solutions with automated entry systems, digital ticketing, 
+                    Modern parking solutions with automated entry systems, digital ticketing,
                     and multi-level parking management.
                 </p>
 
@@ -296,7 +294,7 @@ body {
         </div>
 
     </div>
-         <div class="brochure-download">
+    <div class="brochure-download">
         <a href="files/bc.pdf" download="Mandeepa Realm Ltd.pdf" class="download-btn">
             <i class="fas fa-download"></i> Download Brochure
         </a>
@@ -308,8 +306,10 @@ body {
             <div class="row g-5">
                 <div class="col-lg-4 col-md-6">
                     <h5 class="text-white mb-4">Our Offices</h5>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Regd.Office: 504,Dev Plaza, 5th floor, Opp. Andheri Fire Bridge, S.V. Road, Andheri West, Mumbai – 400058, Maharashtra, India.</p>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Corp.Office: Mandeepa realm , Plot No. AA-IIB-3255, Street No.508, New Town, Kolkata - 700161.  </p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Regd.Office: 504,Dev Plaza, 5th floor, Opp.
+                        Andheri Fire Bridge, S.V. Road, Andheri West, Mumbai – 400058, Maharashtra, India.</p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Corp.Office: Mandeepa realm , Plot No.
+                        AA-IIB-3255, Street No.508, New Town, Kolkata - 700161. </p>
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 9939053905</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>mrl@mandeepa.com</p>
                     <div class="d-flex pt-3">
@@ -328,10 +328,9 @@ body {
                     <a class="btn btn-link" href="socialworks.html">Social Services</a>
                     <a class="btn btn-link" href="service.html">Our Services</a>
                     <a class="btn btn-link" href="project.html">Projects</a>
-                    <a class="btn btn-link" 
-                    href="https://docs.google.com/forms/d/e/1FAIpQLSevOL_MfMcr95ltE8BvZvo4yQL1ASymWAkElHlPewBL3ivqUQ/viewform?usp=preview"
-   target="_blank"
-   rel="noopener noreferrer">Careers</a>
+                    <a class="btn btn-link"
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSevOL_MfMcr95ltE8BvZvo4yQL1ASymWAkElHlPewBL3ivqUQ/viewform?usp=preview"
+                        target="_blank" rel="noopener noreferrer">Careers</a>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <p class="mb-1">Monday - Saturday</p>
@@ -345,10 +344,11 @@ body {
     <!-- Footer End -->
 
 
-   
+
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
+            class="bi bi-arrow-up"></i></a>
 
 
     <!-- JavaScript Libraries -->
